@@ -1,0 +1,15 @@
+@import "variables.scss";
+@import "my-bootstrap.scss";
+
+body {
+    background-color: $offwhite;
+    .jumbotron {
+        font-family: "omnes-pro", sans-serif;
+        h1 {
+            font-size: 5rem;
+        }
+    }
+    #content {
+        font-family: "acumin-pro", sans-serif;
+    }
+}
