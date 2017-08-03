@@ -1,4 +1,4 @@
-# Maximum Development's Quick-and-Easy Blog
+# Maximum Development's Markdown Blog
 
 ## Instructions
 
