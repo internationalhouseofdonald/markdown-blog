@@ -1,1 +1,0 @@
-Cool theme: Super Hero Glitch
