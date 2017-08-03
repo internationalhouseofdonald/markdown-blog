@@ -1,6 +1,7 @@
 @import "variables";
 @import "breakpoints";
 @import "markdown";
+@import "bootswatch";
 
 body {
     background-color: $offwhite;
@@ -17,23 +18,35 @@ body {
     }
 
     .jumbotron {
-        font-family: "subway-new-york-sc", sans-serif;
         background-color: #EEE;
         h1 {
-            font-size: 4.5rem;
-            @media (min-width: 575px) {
+            font-family: "subway-new-york-sc", sans-serif;
+            text-shadow: 5px 5px 0 #EEE, 10px 10px 5px #888888;
+            font-size: 5rem;
+
+            @media (min-width: 465px) {
                 font-size: 6rem;
             }
-            @media (min-width: 767px) {
+            // font-weight: bold;
+            @media (min-width: 614px) {
                 font-size: 8rem;
             }
+            @media (min-width: 767px) {
+                font-size: 10rem;
+            }
+            @media (min-width: 991px) { 
+                font-size: 12rem;
+            }
+        }
+        h2 {
+            font-family: 'omnes-pro', sans-serif;
         }
         a {
             text-decoration: none;
+            color: $link-color;
             i {
                 padding: 4px;
-                border: 1px solid $link;
-                box-shadow: 10px 10px 5px #888888;
+                text-shadow: 10px 10px 6px #AAA;
                 font-size: 1.5rem;
                 @media (min-width: 575px) {
                     font-size: 1.75rem;

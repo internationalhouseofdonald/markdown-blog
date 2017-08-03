@@ -1,9 +1,18 @@
+// @import 'variables';
+
 #content {
   blockquote {
     padding-left: 20px;
-    background-color: #EEE;
-    border-left: 4px solid #CCC;
+    // background-color: nth(#777, 2);
     font-size: 1.2rem;
+    &:nth-of-type(1) {
+      background-color: lighten($brand-danger, 35%);
+      border-left: 4px solid $brand-danger;
+    }
+    &:nth-of-type(2) {
+      background-color: lighten($brand-primary, 35%);
+      border-left: 4px solid $brand-primary;
+    }
   }
   p {
     text-indent: 30px;
