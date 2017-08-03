@@ -1,12 +1,28 @@
-@import "variables.scss";
-@import "my-bootstrap.scss";
+@import "variables";
+@import "breakpoints";
 
 body {
     background-color: $offwhite;
     .jumbotron {
         font-family: "subway-new-york-sc", sans-serif;
+        background-color: #EEE;
         h1 {
-            font-size: 5rem;
+            font-size: 4rem;
+            @media (min-width: 767px) {
+                font-size: 8rem;
+            }
+        }
+        a {
+            text-decoration: none;
+            i {
+                padding: 4px;
+                border: 1px solid $link;
+                box-shadow: 10px 10px 5px #888888;
+                font-size: 1rem;
+                @media (min-width: 767px) {
+                    font-size: 2rem;
+                }
+            }
         }
     }
     #content {
