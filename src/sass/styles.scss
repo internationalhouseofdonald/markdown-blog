@@ -1,13 +1,29 @@
 @import "variables";
 @import "breakpoints";
+@import "markdown";
 
 body {
     background-color: $offwhite;
+
+    nav {
+        button {
+            border: 0;
+        }
+        .navbar-toggler {
+            border-color: rgba(0,0,0,0) !important;
+            width: 50px;
+            text-align: center;
+        }
+    }
+
     .jumbotron {
         font-family: "subway-new-york-sc", sans-serif;
         background-color: #EEE;
         h1 {
-            font-size: 4rem;
+            font-size: 4.5rem;
+            @media (min-width: 575px) {
+                font-size: 6rem;
+            }
             @media (min-width: 767px) {
                 font-size: 8rem;
             }
@@ -18,7 +34,10 @@ body {
                 padding: 4px;
                 border: 1px solid $link;
                 box-shadow: 10px 10px 5px #888888;
-                font-size: 1rem;
+                font-size: 1.5rem;
+                @media (min-width: 575px) {
+                    font-size: 1.75rem;
+                }
                 @media (min-width: 767px) {
                     font-size: 2rem;
                 }

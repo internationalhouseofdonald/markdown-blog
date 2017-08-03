@@ -12,8 +12,8 @@
     <body>
 
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggle();">
+          <i class="fa fa-caret-left fa-2x" id="toggler_icon"></i>
         </button>
         <a class="navbar-brand" href="#">            <!-- This needs a file loader from Webpack 3  -->
             <img src="./src/images/face-clip.png" alt="Donald's Face" width="36"></a>
@@ -24,15 +24,13 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
+              <a class="nav-link" href="#">Things to Do</a>
+              <!-- GoMax! Among other things from old site (Books to read, food to eat, things to see, Archives, places to go)  -->
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
       </nav>
@@ -60,12 +58,34 @@
         <div class="container">
 
             <div class="row">
-                
-                <div id="content"></div>
+
+              <h1>
+                <script>
+                  var dateObj, month, day, year;
+                  dateObj = new Date();
+                  month = dateObj.getUTCMonth() + 1; //months from 1-12
+                  day = dateObj.getUTCDate();
+                  year = dateObj.getUTCFullYear();
+
+                  newdate = month + "." + day + "." + year;
+                  document.write(newdate);
+                </script>
+              </h1>
+              
+              <div id="content" class="col-12"></div>
 
             </div>
 
         </div>
+
+        <footer class="footer pt-5 text-center">
+          <h5>
+            Copyright <script>document.write(year);</script>
+          </h5>
+          <h6>
+            maximumdev.biz
+          </h6>
+        </footer>
 
 
 
@@ -77,10 +97,23 @@
         <!--jQuery-->
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <!--Webpack-->
-        <script src="dist/index.bundle.js"></script>
+        <script src="./dist/index.bundle.js"></script>
         <!--Tether-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <!--Bootstrap-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    </body>
+        <!-- Old School  -->
+        <script>
+          function toggle() {
+              var toggler = document.getElementById("toggler_icon");
+              if ( toggler.classList.contains('fa-caret-left') ) {
+                toggler.classList.remove('fa-caret-left');
+                toggler.classList.add('fa-caret-down');
+              } else {
+                toggler.classList.remove('fa-caret-down');
+                toggler.classList.add('fa-caret-left');
+              }
+          }
+        </script>
+      </body>
 </html>
