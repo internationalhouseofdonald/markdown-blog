@@ -12,7 +12,7 @@ toggleComponent = document.getElementById('toggle-component');
 
 scroll.addEventListener("click", function() {
     if ( toggleComponent.classList.contains('collapsed') ) {
-        // TODO: get window width
+        // TODO: make this scroll to 20px above #content
         $("html, body").animate({scrollTop: 460}, 1000, "linear");
     } else {
         $("html, body").animate({scrollTop: 720}, 1000, "linear");
